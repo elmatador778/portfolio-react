@@ -28,14 +28,7 @@ export const experiences = [
     label: 'A3D Design',
     titre: "Designer 3D : stage d'observation (modélisation et animation)",
     meta: 'A3D Design, Limoges · juillet 2021',
-    paras: [
-      'Modélisations numériques exigeant rigueur et minutie, dans le respect des délais.',
-      "Participation à l'étude de conception d'un harnais de sécurité 5 points pour siège de manège à sensations : modélisation CAO de la boucle centrale et des points d'ancrage, puis analyse numérique de la répartition des contraintes sur les zones de verrouillage.",
-    ],
-    images: [
-      { src: `${BASE}assets/a3d-harnais-cao.svg`, cap: 'Harnais 5 points — étude CAO, siège de manège à sensations' },
-      { src: `${BASE}assets/a3d-harnais-analyse.svg`, cap: "Analyse numérique — répartition des contraintes sur la boucle d'ancrage" },
-    ],
+    paras: ['Modélisations numériques exigeant rigueur et minutie, dans le respect des délais.'],
   },
   {
     label: 'Natation',
@@ -49,9 +42,43 @@ export const experiences = [
 ];
 
 export const projetsData = [
-  { tag: 'Électronique analogique', cat: 'Électronique', titre: "Amplis audio & pédales d'effet", desc: "Conception, assemblage et test d'amplificateurs audio et de pédales d'effet pour guitare." },
-  { tag: 'Robotique embarquée', cat: 'Embarqué', titre: 'Robots autonomes Arduino', desc: 'Construction, câblage et programmation de robots autonomes en C++ sur Arduino.' },
-  { tag: 'Capteurs & temps réel', cat: 'Embarqué', titre: 'Radar à ultrasons', desc: 'Capteur HC-SR04 et servomoteur, acquisition et visualisation de données en temps réel sous Processing.' },
+  {
+    tag: 'Électronique analogique',
+    cat: 'Électronique',
+    titre: "Amplis audio & pédale d'effet Overdrive-Distorsion",
+    desc: "Pédale de type Tube Screamer TS808 : simulation du circuit, rétro-ingénierie du schéma, montage sur plaque LABDEC puis réalisation de la carte électronique et du prototype final. Conception et test d'amplificateurs audio.",
+    imgSrc: `${BASE}assets/pedale-p3b.png`,
+  },
+  {
+    tag: 'Robotique embarquée',
+    cat: 'Embarqué',
+    titre: 'Robot autonome à évitement d\'obstacles',
+    desc: "Châssis 4 roues motrices sur Arduino Uno : capteur ultrasonique HC-SR04, pilotage des moteurs via pont en H L298N, logique d'évitement programmée en C++ (mesure d'écho, arrêt, recul, pivot).",
+    imgSrc: 'https://images.unsplash.com/photo-1558137623-ce933996c730?q=80&w=800&auto=format&fit=crop',
+    imgCredit: 'Photo by Marília Castelli on Unsplash',
+    imgCreditHref: 'https://unsplash.com/@liacastelli',
+  },
+  {
+    tag: 'Capteurs & temps réel',
+    cat: 'Embarqué',
+    titre: 'Radar à ultrasons',
+    desc: 'Capteur HC-SR04 et servomoteur, acquisition et visualisation de données en temps réel sous Processing.',
+    imgSrc: 'https://images.unsplash.com/photo-1631378297854-185cff6b0986?q=80&w=800&auto=format&fit=crop',
+    imgCredit: 'Photo by Vishnu Mohanan on Unsplash',
+    imgCreditHref: 'https://unsplash.com/@vishnumaiea',
+  },
+];
+
+export const pedaleGallery = [
+  { src: `${BASE}assets/pedale-p3b.png`, cap: "1. Schéma électronique de l'effet (simulation)" },
+  { src: `${BASE}assets/pedale-p5c.png`, cap: "2. Mesure de l'écrêtage à l'oscilloscope" },
+];
+
+export const robotGallery = [
+  { src: 'https://images.unsplash.com/photo-1577962144759-8dec6b55c952?q=80&w=800&auto=format&fit=crop', cap: '1. Inventaire des composants', credit: 'Photo Robin Glauser, Unsplash', creditHref: 'https://unsplash.com/@nahakiole' },
+  { src: 'https://images.unsplash.com/photo-1553406830-ef2513450d76?q=80&w=800&auto=format&fit=crop', cap: '2. Arduino Uno, cerveau du robot', credit: 'Photo Harrison Broadbent, Unsplash', creditHref: 'https://unsplash.com/@harrisonbroadbent' },
+  { src: 'https://images.unsplash.com/photo-1555664424-778a1e5e1b48?q=80&w=800&auto=format&fit=crop', cap: '3. Câblage capteur et moteurs', credit: 'Photo Robin Glauser, Unsplash', creditHref: 'https://unsplash.com/@nahakiole' },
+  { src: 'https://images.unsplash.com/photo-1561144257-e32e8efc6c4f?q=80&w=800&auto=format&fit=crop', cap: '4. Robot assemblé, prêt à rouler', credit: 'Photo Marília Castelli, Unsplash', creditHref: 'https://unsplash.com/@liacastelli' },
 ];
 
 export const projFilters = ['Tous', 'Électronique', 'Embarqué'];
@@ -67,6 +94,61 @@ export const formationCards = [
   { titre: 'Électronique et signal', desc: 'Amplification, filtrage, radiofréquence (RF), traitement du signal pour systèmes communicants.' },
   { titre: 'Automatique', desc: 'Lois de commande, régulation, asservissement de systèmes linéaires : PID, stabilité, précision.' },
   { titre: 'Embarqué et informatique', desc: 'Architecture des microcontrôleurs, POO (C++, Python), protocoles réseaux, SQL.' },
+];
+
+export const semesters = [
+  {
+    label: 'Semestre 1',
+    photo: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=800&auto=format&fit=crop',
+    credit: 'Photo by Dan Cristian Pădureț on Unsplash',
+    creditHref: 'https://unsplash.com/@dancristianpaduret',
+    topics: [
+      'Mathématiques et logique : complexes, analyse, algèbre de Boole',
+      'Électricité : courant continu et alternatif',
+      'Ondes, étude fréquentielle et filtrage',
+      'Mécanique et incertitudes',
+      'Algorithmique : C/Arduino, Python',
+    ],
+  },
+  {
+    label: 'Semestre 2',
+    photo: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800&auto=format&fit=crop',
+    credit: 'Photo by Danist Soh on Unsplash',
+    creditHref: 'https://unsplash.com/@danist07',
+    topics: [
+      'Probabilités, statistiques et algèbre',
+      'Thermique et résistance des matériaux (RDM)',
+      'Bases de données et langage SQL',
+      'CAO et gestion de production',
+      'Argumentaire technico-commercial',
+    ],
+  },
+  {
+    label: 'Semestre 3 · Spécialité SEEE',
+    photo: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop',
+    credit: 'Photo by Alexandre Debiève on Unsplash',
+    creditHref: 'https://unsplash.com/@alexkixa',
+    topics: [
+      'Électromagnétisme et radioélectricité',
+      'Électronique analogique : semi-conducteurs, AOP',
+      'Réseaux : adressage IP, Ethernet, CCNA',
+      'Capteurs, actionneurs, régulation et asservissement',
+      'Analyse en 3 dimensions',
+    ],
+  },
+  {
+    label: 'Semestre 4',
+    photo: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=800&auto=format&fit=crop',
+    credit: 'Photo by Christopher Gower on Unsplash',
+    creditHref: 'https://unsplash.com/@cgower',
+    topics: [
+      'Programmation orientée objet',
+      'Programmation embarquée',
+      'Architectures informatiques et assembleur',
+      'Théorie du langage, structures de données, complexité',
+      'Stage en entreprise (8 semaines et plus)',
+    ],
+  },
 ];
 
 export const formationImages = [

@@ -1,4 +1,4 @@
-import { formationCards, formationImages } from '../../data/portfolioData';
+import { formationCards, formationImages, semesters } from '../../data/portfolioData';
 
 export default function FormationSection() {
   return (
@@ -15,6 +15,27 @@ export default function FormationSection() {
           <div key={c.titre} style={{ background: '#ffffff', border: '1px solid #e0e0e0', borderRadius: 18, padding: 24 }}>
             <h3 style={{ margin: '0 0 8px', fontSize: 17, fontWeight: 600, letterSpacing: '-0.374px', color: '#1d1d1f' }}>{c.titre}</h3>
             <p style={{ margin: 0, fontSize: 14, lineHeight: 1.43, letterSpacing: '-0.224px', color: '#333333' }}>{c.desc}</p>
+          </div>
+        ))}
+      </div>
+      <h3 style={{ margin: '64px 0 0', fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 28, fontWeight: 600, lineHeight: 1.14, color: '#1d1d1f' }}>
+        Matières abordées, semestre par semestre.
+      </h3>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))', gap: 20, maxWidth: 980, margin: '32px auto 0', textAlign: 'left' }}>
+        {semesters.map((s) => (
+          <div key={s.label} style={{ background: '#ffffff', border: '1px solid #e0e0e0', borderRadius: 18, padding: '0 0 24px', display: 'flex', flexDirection: 'column', gap: 10, overflow: 'hidden' }}>
+            <div style={{ width: '100%', aspectRatio: '16/9', margin: '0 0 4px' }}>
+              <img src={s.photo} alt={s.label} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+            </div>
+            <p style={{ margin: 0, padding: '0 24px', fontSize: 12, fontWeight: 600, letterSpacing: '-0.12px', color: '#0066cc', textTransform: 'uppercase' }}>{s.label}</p>
+            <ul style={{ margin: 0, padding: '0 24px 0 42px', display: 'flex', flexDirection: 'column', gap: 6, fontSize: 14, lineHeight: 1.43, letterSpacing: '-0.224px', color: '#333333' }}>
+              {s.topics.map((t) => (
+                <li key={t}>{t}</li>
+              ))}
+            </ul>
+            <p style={{ margin: '4px 24px 0', fontSize: 11, color: '#a0a0a0' }}>
+              <a href={s.creditHref} target="_blank" rel="noopener noreferrer" style={{ color: '#a0a0a0' }}>{s.credit}</a>
+            </p>
           </div>
         ))}
       </div>

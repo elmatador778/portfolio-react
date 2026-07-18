@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="system-ui,sans-serif">
+<rect width="800" height="600" fill="#fafafc"></rect>
+
+<!-- isometric seat shell -->
+<g stroke="#1d1d1f" stroke-width="2.5" fill="none" stroke-linejoin="round">
+  <path d="M300 460 L300 300 L420 240 L540 300 L540 460 L420 520 Z"></path>
+  <path d="M300 300 L420 360 L540 300"></path>
+  <path d="M420 360 L420 520"></path>
+  <path d="M300 460 L420 520 L540 460"></path>
+</g>
+<text x="452" y="255" font-size="14" fill="#7a7a7a">coque baquet</text>
+
+<!-- centerline -->
+<line x1="420" y1="200" x2="420" y2="540" stroke="#7a7a7a" stroke-width="1.5" stroke-dasharray="8 5"></line>
+
+<!-- shoulder straps -->
+<g stroke="#0066cc" stroke-width="6" fill="none" stroke-linecap="round">
+  <path d="M355 250 C 370 300 395 340 418 372"></path>
+  <path d="M485 250 C 470 300 445 340 422 372"></path>
+</g>
+
+<!-- lap straps -->
+<g stroke="#0066cc" stroke-width="6" fill="none" stroke-linecap="round">
+  <path d="M320 430 C 360 400 395 384 418 376"></path>
+  <path d="M520 430 C 480 400 445 384 422 376"></path>
+</g>
+
+<!-- crotch strap -->
+<path d="M420 500 L420 380" stroke="#0066cc" stroke-width="6" fill="none" stroke-linecap="round"></path>
+
+<!-- central 5-point buckle -->
+<circle cx="420" cy="374" r="20" fill="#ffffff" stroke="#1d1d1f" stroke-width="2.5"></circle>
+<circle cx="420" cy="374" r="7" fill="#0066cc"></circle>
+
+<!-- shoulder anchors -->
+<circle cx="352" cy="246" r="5" fill="#1d1d1f"></circle>
+<circle cx="488" cy="246" r="5" fill="#1d1d1f"></circle>
+<circle cx="316" cy="432" r="5" fill="#1d1d1f"></circle>
+<circle cx="524" cy="432" r="5" fill="#1d1d1f"></circle>
+<circle cx="420" cy="504" r="5" fill="#1d1d1f"></circle>
+
+<!-- callouts -->
+<g stroke="#7a7a7a" stroke-width="1" fill="none">
+  <line x1="420" y1="374" x2="600" y2="330"></line>
+  <line x1="352" y1="246" x2="230" y2="200"></line>
+  <line x1="420" y1="504" x2="600" y2="540"></line>
+</g>
+<text x="604" y="326" font-size="16" fill="#1d1d1f" font-weight="600">Boucle centrale multiplex</text>
+<text x="604" y="344" font-size="13" fill="#7a7a7a">ouverture rapide, 5 brins</text>
+
+<text x="120" y="196" font-size="16" fill="#1d1d1f" font-weight="600">Ancrage sangle épaule</text>
+<text x="120" y="214" font-size="13" fill="#7a7a7a">sangle polyester 45 mm</text>
+
+<text x="604" y="536" font-size="16" fill="#1d1d1f" font-weight="600">Sangle entrejambe</text>
+<text x="604" y="554" font-size="13" fill="#7a7a7a">anti-sous-marinage</text>
+
+<!-- dimension marker -->
+<g stroke="#1d1d1f" stroke-width="1.5">
+  <line x1="560" y1="300" x2="560" y2="460"></line>
+  <line x1="552" y1="300" x2="568" y2="300"></line>
+  <line x1="552" y1="460" x2="568" y2="460"></line>
+</g>
+<text x="574" y="384" font-size="13" fill="#7a7a7a">H seat</text>
+
+<text x="60" y="580" font-size="20" fill="#7a7a7a">Harnais 5 points — étude CAO, siège de manège à sensations</text>
+</svg>

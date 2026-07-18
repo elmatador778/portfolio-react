@@ -28,7 +28,14 @@ export const experiences = [
     label: 'A3D Design',
     titre: "Designer 3D : stage d'observation (modélisation et animation)",
     meta: 'A3D Design, Limoges · juillet 2021',
-    paras: ['Modélisations numériques exigeant rigueur et minutie, dans le respect des délais.'],
+    paras: [
+      'Modélisations numériques exigeant rigueur et minutie, dans le respect des délais.',
+      "Participation à l'étude de conception d'un harnais de sécurité 5 points pour siège de manège à sensations : modélisation CAO de la boucle centrale et des points d'ancrage, puis analyse numérique de la répartition des contraintes sur les zones de verrouillage.",
+    ],
+    images: [
+      { src: `${BASE}assets/a3d-harnais-cao.svg`, cap: 'Harnais 5 points — étude CAO, siège de manège à sensations' },
+      { src: `${BASE}assets/a3d-harnais-analyse.svg`, cap: "Analyse numérique — répartition des contraintes sur la boucle d'ancrage" },
+    ],
   },
   {
     label: 'Natation',

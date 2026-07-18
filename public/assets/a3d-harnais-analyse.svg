@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="system-ui,sans-serif">
+<rect width="800" height="600" fill="#fafafc"></rect>
+
+<defs>
+  <radialGradient id="stressHot" cx="50%" cy="50%" r="60%">
+    <stop offset="0%" stop-color="#ff3b30"></stop>
+    <stop offset="45%" stop-color="#ffad47"></stop>
+    <stop offset="75%" stop-color="#fad165"></stop>
+    <stop offset="100%" stop-color="#16a766"></stop>
+  </radialGradient>
+  <linearGradient id="legendGrad" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#4a86e8"></stop>
+    <stop offset="35%" stop-color="#16a766"></stop>
+    <stop offset="65%" stop-color="#fad165"></stop>
+    <stop offset="100%" stop-color="#ff3b30"></stop>
+  </linearGradient>
+</defs>
+
+<!-- exploded assembly: buckle housing / latch plate / anchor pin -->
+<g stroke="#1d1d1f" stroke-width="2.5" fill="none" stroke-linejoin="round">
+  <rect x="330" y="120" width="140" height="60" rx="10"></rect>
+  <rect x="345" y="240" width="110" height="40" rx="8"></rect>
+  <circle cx="400" cy="360" r="30"></circle>
+</g>
+<circle cx="400" cy="360" r="30" fill="url(#stressHot)" opacity="0.9"></circle>
+<circle cx="400" cy="360" r="8" fill="#1d1d1f"></circle>
+
+<g stroke="#7a7a7a" stroke-width="1.5" stroke-dasharray="6 5">
+  <line x1="400" y1="180" x2="400" y2="240"></line>
+  <line x1="400" y1="280" x2="400" y2="330"></line>
+</g>
+
+<text x="480" y="155" font-size="16" fill="#1d1d1f" font-weight="600">Corps de boucle</text>
+<text x="480" y="173" font-size="13" fill="#7a7a7a">acier inox, emboutissage</text>
+
+<text x="480" y="265" font-size="16" fill="#1d1d1f" font-weight="600">Platine de verrouillage</text>
+<text x="480" y="283" font-size="13" fill="#7a7a7a">languette + ressort de rappel</text>
+
+<text x="450" y="365" font-size="16" fill="#1d1d1f" font-weight="600">Point d'ancrage</text>
+<text x="450" y="383" font-size="13" fill="#7a7a7a">zone de contrainte maximale simulée</text>
+
+<!-- secondary lower-stress anchor points -->
+<circle cx="230" cy="440" r="18" fill="url(#stressHot)" opacity="0.55"></circle>
+<circle cx="230" cy="440" r="18" fill="none" stroke="#1d1d1f" stroke-width="2"></circle>
+<text x="130" y="480" font-size="13" fill="#7a7a7a">ancrage latéral gauche</text>
+
+<circle cx="570" cy="440" r="14" fill="url(#stressHot)" opacity="0.35"></circle>
+<circle cx="570" cy="440" r="14" fill="none" stroke="#1d1d1f" stroke-width="2"></circle>
+<text x="545" y="480" font-size="13" fill="#7a7a7a">ancrage latéral droit</text>
+
+<!-- legend -->
+<rect x="300" y="520" width="200" height="14" rx="7" fill="url(#legendGrad)"></rect>
+<text x="300" y="512" font-size="13" fill="#7a7a7a">contrainte simulée (faible → élevée)</text>
+<text x="292" y="552" font-size="12" fill="#7a7a7a" text-anchor="end">min</text>
+<text x="508" y="552" font-size="12" fill="#7a7a7a">max</text>
+
+<text x="60" y="580" font-size="20" fill="#7a7a7a">Analyse numérique — répartition des contraintes sur la boucle d'ancrage</text>
+</svg>

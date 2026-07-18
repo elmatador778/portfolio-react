@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="system-ui,sans-serif">
+<defs>
+  <linearGradient id="pcbGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#136b45"></stop>
+    <stop offset="100%" stop-color="#0c4d31"></stop>
+  </linearGradient>
+  <linearGradient id="icGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#3a3a3c"></stop>
+    <stop offset="100%" stop-color="#161618"></stop>
+  </linearGradient>
+  <filter id="pcbShadow" x="-30%" y="-30%" width="160%" height="160%">
+    <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.22"></feDropShadow>
+  </filter>
+</defs>
+<rect width="800" height="600" fill="#f3f4f7"></rect>
+
+<g filter="url(#pcbShadow)">
+  <rect x="90" y="90" width="620" height="380" rx="8" fill="url(#pcbGrad)"></rect>
+</g>
+<rect x="90" y="90" width="620" height="380" rx="8" fill="none" stroke="#083621" stroke-width="1.5"></rect>
+
+<!-- mounting holes -->
+<circle cx="115" cy="115" r="7" fill="#0c4d31" stroke="#e0c46c" stroke-width="2"></circle>
+<circle cx="685" cy="115" r="7" fill="#0c4d31" stroke="#e0c46c" stroke-width="2"></circle>
+<circle cx="115" cy="445" r="7" fill="#0c4d31" stroke="#e0c46c" stroke-width="2"></circle>
+<circle cx="685" cy="445" r="7" fill="#0c4d31" stroke="#e0c46c" stroke-width="2"></circle>
+
+<!-- copper traces -->
+<g fill="none" stroke="#e0c46c" stroke-width="3" stroke-linecap="round" opacity="0.9">
+  <path d="M180 160 L180 220 L260 220"></path>
+  <path d="M260 220 L340 220 L340 180"></path>
+  <path d="M340 220 L340 280 L420 280"></path>
+  <path d="M180 300 L260 300 L260 360 L340 360"></path>
+  <path d="M420 280 L500 280 L500 200 L580 200"></path>
+  <path d="M420 340 L500 340 L500 400 L580 400"></path>
+  <path d="M260 360 L260 420 L420 420"></path>
+  <path d="M580 260 L620 260 L620 340 L580 340"></path>
+</g>
+<g fill="none" stroke="#c9a13b" stroke-width="1.5" stroke-linecap="round" opacity="0.55">
+  <path d="M200 140 L240 140 L240 400"></path>
+  <path d="M600 140 L640 140 L640 420"></path>
+</g>
+
+<!-- vias -->
+<g fill="#e0c46c">
+  <circle cx="180" cy="220" r="3"></circle><circle cx="260" cy="220" r="3"></circle><circle cx="340" cy="220" r="3"></circle>
+  <circle cx="340" cy="280" r="3"></circle><circle cx="420" cy="280" r="3"></circle><circle cx="500" cy="280" r="3"></circle>
+  <circle cx="260" cy="300" r="3"></circle><circle cx="260" cy="360" r="3"></circle><circle cx="340" cy="360" r="3"></circle>
+  <circle cx="500" cy="200" r="3"></circle><circle cx="580" cy="200" r="3"></circle>
+  <circle cx="260" cy="420" r="3"></circle><circle cx="420" cy="420" r="3"></circle>
+</g>
+
+<!-- microcontroller IC -->
+<rect x="330" y="230" width="90" height="90" rx="4" fill="url(#icGrad)"></rect>
+<g fill="#c9c9c9">
+  <rect x="322" y="240" width="8" height="10"></rect><rect x="322" y="258" width="8" height="10"></rect><rect x="322" y="276" width="8" height="10"></rect><rect x="322" y="294" width="8" height="10"></rect>
+  <rect x="420" y="240" width="8" height="10"></rect><rect x="420" y="258" width="8" height="10"></rect><rect x="420" y="276" width="8" height="10"></rect><rect x="420" y="294" width="8" height="10"></rect>
+  <rect x="340" y="222" width="10" height="8"></rect><rect x="358" y="222" width="10" height="8"></rect><rect x="376" y="222" width="10" height="8"></rect><rect x="394" y="222" width="10" height="8"></rect>
+  <rect x="340" y="320" width="10" height="8"></rect><rect x="358" y="320" width="10" height="8"></rect><rect x="376" y="320" width="10" height="8"></rect><rect x="394" y="320" width="10" height="8"></rect>
+</g>
+<circle cx="342" cy="242" r="3" fill="#8a8a8a"></circle>
+<text x="345" y="280" font-size="11" fill="#e5e5e5" font-weight="600">MCU</text>
+
+<!-- resistors / passive components -->
+<g>
+  <rect x="150" y="330" width="34" height="14" rx="2" fill="#3a3a3c"></rect>
+  <rect x="150" y="330" width="6" height="14" fill="#c9a13b"></rect>
+  <rect x="150" y="360" width="34" height="14" rx="2" fill="#3a3a3c"></rect>
+  <rect x="150" y="360" width="6" height="14" fill="#c9a13b"></rect>
+  <rect x="440" y="360" width="14" height="34" rx="2" fill="#1d3f8f"></rect>
+  <rect x="440" y="150" width="14" height="34" rx="2" fill="#1d3f8f"></rect>
+</g>
+
+<!-- headers / connector -->
+<g fill="#c9c9c9">
+  <rect x="570" y="150" width="8" height="14"></rect><rect x="584" y="150" width="8" height="14"></rect><rect x="598" y="150" width="8" height="14"></rect><rect x="612" y="150" width="8" height="14"></rect>
+</g>
+<rect x="565" y="145" width="60" height="24" fill="none" stroke="#0c4d31" stroke-width="1"></rect>
+
+<!-- silkscreen -->
+<text x="120" y="140" font-size="12" fill="#e5e5e5" opacity="0.85">CESI-SEEE · REV A</text>
+<text x="470" y="440" font-size="11" fill="#e5e5e5" opacity="0.7">TP · carte de commande</text>
+
+<text x="60" y="565" font-size="20" fill="#7a7a7a">Conception et routage d'une carte de commande — TP électronique numérique</text>
+</svg>

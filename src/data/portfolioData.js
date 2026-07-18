@@ -1,3 +1,5 @@
+const BASE = import.meta.env.BASE_URL;
+
 export const pages = [
   { id: 'accueil', label: 'Accueil' },
   { id: 'experience', label: 'Expérience' },
@@ -18,8 +20,8 @@ export const experiences = [
       'Tests et validation avec les chercheurs utilisateurs · rapport technique et soutenance devant jury.',
     ],
     images: [
-      { src: '/assets/onera-configuration.png', cap: 'Onglet Configuration : paramétrage de la simulation (particule incidente, cible)' },
-      { src: '/assets/onera-simulations.png', cap: 'Gestion des simulations concurrentes avec suivi de progression en temps réel' },
+      { src: `${BASE}assets/onera-configuration.png`, cap: 'Onglet Configuration : paramétrage de la simulation (particule incidente, cible)' },
+      { src: `${BASE}assets/onera-simulations.png`, cap: 'Gestion des simulations concurrentes avec suivi de progression en temps réel' },
     ],
   },
   {
@@ -61,12 +63,12 @@ export const formationCards = [
 ];
 
 export const formationImages = [
-  { src: '/assets/cesi-schema-ampli.svg', cap: 'Amplificateur audio, montage non inverseur' },
-  { src: '/assets/cesi-cablage-arduino.svg', cap: 'Câblage capteur ultrasons et microcontrôleur' },
-  { src: '/assets/cesi-oscilloscope.svg', cap: "Mesure et validation à l'oscilloscope" },
+  { src: `${BASE}assets/cesi-schema-ampli.svg`, cap: 'Amplificateur audio, montage non inverseur' },
+  { src: `${BASE}assets/cesi-cablage-arduino.svg`, cap: 'Câblage capteur ultrasons et microcontrôleur' },
+  { src: `${BASE}assets/cesi-oscilloscope.svg`, cap: "Mesure et validation à l'oscilloscope" },
 ];
 
-export const CV_PATH = '/CV-Tsiky-Andrianarisata.pdf';
+export const CV_PATH = `${BASE}CV-Tsiky-Andrianarisata.pdf`;
 export const EMAIL = 'andrianarisatatsiky@gmail.com';
 export const PHONE_DISPLAY = '06 41 15 96 12';
 export const PHONE_HREF = '+33641159612';

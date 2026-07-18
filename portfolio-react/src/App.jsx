@@ -1,25 +1,17 @@
-import { LanguageProvider } from './context/LanguageContext';
-import Nav from './components/Nav';
-import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Resume from './components/Resume';
-import Footer from './components/Footer';
+import { HashRouter, Routes, Route } from 'react-router-dom';
+import CookieBanner from './components/CookieBanner';
+import Portfolio from './pages/Portfolio';
+import Legal from './pages/Legal';
 import './index.css';
 
 export default function App() {
   return (
-    <LanguageProvider>
-      <Nav />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Resume />
-      </main>
-      <Footer />
-    </LanguageProvider>
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Portfolio />} />
+        <Route path="/legal" element={<Legal />} />
+      </Routes>
+      <CookieBanner />
+    </HashRouter>
   );
 }

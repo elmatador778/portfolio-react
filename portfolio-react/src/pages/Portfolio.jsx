@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Nav from '../components/Nav';
+import Dock from '../components/Dock';
 import Footer from '../components/Footer';
 import HeroSection from '../components/sections/HeroSection';
 import ExperienceSection from '../components/sections/ExperienceSection';
@@ -20,7 +20,7 @@ export default function Portfolio() {
 
   return (
     <>
-      <Nav page={page} goTo={goTo} />
+      <Dock page={page} goTo={goTo} />
       {page === 'accueil' && <HeroSection goTo={goTo} />}
       {page === 'experience' && <ExperienceSection expIndex={expIndex} setExpIndex={setExpIndex} />}
       {page === 'formation' && <FormationSection />}

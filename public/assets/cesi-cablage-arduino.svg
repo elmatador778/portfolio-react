@@ -1,21 +1,121 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="system-ui,sans-serif">
-<rect width="800" height="600" fill="#fafafc"></rect>
-<rect x="90" y="180" width="280" height="200" rx="12" fill="#ffffff" stroke="#1d1d1f" stroke-width="2.5"></rect>
-<text x="130" y="230" font-size="24" fill="#1d1d1f" font-weight="600">ARDUINO UNO</text>
-<g fill="#1d1d1f"><rect x="120" y="345" width="10" height="18" rx="2"></rect><rect x="144" y="345" width="10" height="18" rx="2"></rect><rect x="168" y="345" width="10" height="18" rx="2"></rect><rect x="192" y="345" width="10" height="18" rx="2"></rect><rect x="216" y="345" width="10" height="18" rx="2"></rect><rect x="240" y="345" width="10" height="18" rx="2"></rect><rect x="264" y="345" width="10" height="18" rx="2"></rect><rect x="288" y="345" width="10" height="18" rx="2"></rect><rect x="312" y="345" width="10" height="18" rx="2"></rect><rect x="336" y="345" width="10" height="18" rx="2"></rect></g>
-<g fill="#1d1d1f"><rect x="120" y="197" width="10" height="18" rx="2"></rect><rect x="144" y="197" width="10" height="18" rx="2"></rect><rect x="168" y="197" width="10" height="18" rx="2"></rect><rect x="192" y="197" width="10" height="18" rx="2"></rect><rect x="216" y="197" width="10" height="18" rx="2"></rect><rect x="240" y="197" width="10" height="18" rx="2"></rect><rect x="264" y="197" width="10" height="18" rx="2"></rect><rect x="288" y="197" width="10" height="18" rx="2"></rect><rect x="312" y="197" width="10" height="18" rx="2"></rect><rect x="336" y="197" width="10" height="18" rx="2"></rect></g>
-<rect x="95" y="260" width="45" height="35" rx="4" fill="#e0e0e0"></rect>
-<rect x="300" y="255" width="60" height="60" rx="6" fill="#e0e0e0"></rect>
-<rect x="500" y="200" width="220" height="120" rx="12" fill="#ffffff" stroke="#1d1d1f" stroke-width="2.5"></rect>
-<circle cx="560" cy="260" r="38" fill="none" stroke="#1d1d1f" stroke-width="2.5"></circle>
-<circle cx="660" cy="260" r="38" fill="none" stroke="#1d1d1f" stroke-width="2.5"></circle>
-<circle cx="560" cy="260" r="22" fill="#e0e0e0"></circle>
-<circle cx="660" cy="260" r="22" fill="#e0e0e0"></circle>
-<text x="522" y="350" font-size="18" fill="#7a7a7a">HC-SR04 · ultrasons</text>
-<g fill="none" stroke-width="3" stroke-linecap="round">
-<path d="M240 345 C240 460 540 420 545 320" stroke="#0066cc"></path>
-<path d="M264 345 C264 480 640 440 645 320" stroke="#7a7a7a"></path>
-<path d="M288 345 C288 500 600 470 605 320" stroke="#1d1d1f"></path>
+<defs>
+  <linearGradient id="boardGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#0f6e4f"></stop>
+    <stop offset="100%" stop-color="#0a5a41"></stop>
+  </linearGradient>
+  <linearGradient id="bbGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#ffffff"></stop>
+    <stop offset="100%" stop-color="#f0f0f0"></stop>
+  </linearGradient>
+  <radialGradient id="capGrad" cx="35%" cy="30%" r="70%">
+    <stop offset="0%" stop-color="#e5e5e5"></stop>
+    <stop offset="100%" stop-color="#9a9a9a"></stop>
+  </radialGradient>
+  <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+    <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.18"></feDropShadow>
+  </filter>
+</defs>
+<rect width="800" height="600" fill="#f3f4f7"></rect>
+
+<!-- breadboard -->
+<g filter="url(#softShadow)">
+  <rect x="70" y="200" width="330" height="220" rx="10" fill="url(#bbGrad)" stroke="#d0d0d0" stroke-width="1.5"></rect>
 </g>
-<text x="60" y="560" font-size="22" fill="#7a7a7a">Robot autonome, câblage capteur et microcontrôleur</text>
+<rect x="70" y="222" width="330" height="14" fill="#ff6b5e" opacity="0.55"></rect>
+<rect x="70" y="392" width="330" height="14" fill="#4a86e8" opacity="0.55"></rect>
+<g fill="#c9c9c9">
+  <!-- breadboard hole grid -->
+</g>
+<g fill="#bdbdbd">
+  <g id="bbrow"></g>
+</g>
+<!-- procedurally-styled hole rows -->
+<g fill="#c4c4c4">
+  <!-- top power rail holes -->
+  <circle cx="90" cy="229" r="2.4"></circle><circle cx="106" cy="229" r="2.4"></circle><circle cx="122" cy="229" r="2.4"></circle><circle cx="138" cy="229" r="2.4"></circle><circle cx="154" cy="229" r="2.4"></circle><circle cx="170" cy="229" r="2.4"></circle><circle cx="186" cy="229" r="2.4"></circle><circle cx="202" cy="229" r="2.4"></circle><circle cx="218" cy="229" r="2.4"></circle><circle cx="234" cy="229" r="2.4"></circle><circle cx="250" cy="229" r="2.4"></circle><circle cx="266" cy="229" r="2.4"></circle><circle cx="282" cy="229" r="2.4"></circle><circle cx="298" cy="229" r="2.4"></circle><circle cx="314" cy="229" r="2.4"></circle><circle cx="330" cy="229" r="2.4"></circle><circle cx="346" cy="229" r="2.4"></circle><circle cx="362" cy="229" r="2.4"></circle><circle cx="378" cy="229" r="2.4"></circle>
+</g>
+<g fill="#b7c3d6" opacity="0.9">
+  <!-- main matrix rows, 8 rows x 19 cols, sparse for readability -->
+</g>
+<g stroke="#d6d6d6" stroke-width="1" fill="none">
+  <line x1="70" y1="260" x2="400" y2="260"></line>
+  <line x1="70" y1="310" x2="400" y2="310"></line>
+  <line x1="70" y1="360" x2="400" y2="360"></line>
+</g>
+<g fill="#c4c4c4">
+  <g transform="translate(0,0)">
+    <!-- five sample columns of holes to suggest matrix -->
+  </g>
+</g>
+<!-- generate a light dot matrix via repeated small circles -->
+<g fill="#c9c9c9">
+  <g>
+    <circle cx="96" cy="250" r="2"></circle><circle cx="96" cy="264" r="2"></circle><circle cx="96" cy="278" r="2"></circle><circle cx="96" cy="292" r="2"></circle><circle cx="96" cy="306" r="2"></circle>
+    <circle cx="96" cy="322" r="2"></circle><circle cx="96" cy="336" r="2"></circle><circle cx="96" cy="350" r="2"></circle><circle cx="96" cy="364" r="2"></circle><circle cx="96" cy="378" r="2"></circle>
+  </g>
+  <g transform="translate(24,0)"><circle cx="96" cy="250" r="2"></circle><circle cx="96" cy="264" r="2"></circle><circle cx="96" cy="278" r="2"></circle><circle cx="96" cy="292" r="2"></circle><circle cx="96" cy="306" r="2"></circle><circle cx="96" cy="322" r="2"></circle><circle cx="96" cy="336" r="2"></circle><circle cx="96" cy="350" r="2"></circle><circle cx="96" cy="364" r="2"></circle><circle cx="96" cy="378" r="2"></circle></g>
+  <g transform="translate(48,0)"><circle cx="96" cy="250" r="2"></circle><circle cx="96" cy="264" r="2"></circle><circle cx="96" cy="278" r="2"></circle><circle cx="96" cy="292" r="2"></circle><circle cx="96" cy="306" r="2"></circle><circle cx="96" cy="322" r="2"></circle><circle cx="96" cy="336" r="2"></circle><circle cx="96" cy="350" r="2"></circle><circle cx="96" cy="364" r="2"></circle><circle cx="96" cy="378" r="2"></circle></g>
+  <g transform="translate(72,0)"><circle cx="96" cy="250" r="2"></circle><circle cx="96" cy="264" r="2"></circle><circle cx="96" cy="278" r="2"></circle><circle cx="96" cy="292" r="2"></circle><circle cx="96" cy="306" r="2"></circle><circle cx="96" cy="322" r="2"></circle><circle cx="96" cy="336" r="2"></circle><circle cx="96" cy="350" r="2"></circle><circle cx="96" cy="364" r="2"></circle><circle cx="96" cy="378" r="2"></circle></g>
+  <g transform="translate(120,0)"><circle cx="96" cy="250" r="2"></circle><circle cx="96" cy="264" r="2"></circle><circle cx="96" cy="278" r="2"></circle><circle cx="96" cy="292" r="2"></circle><circle cx="96" cy="306" r="2"></circle><circle cx="96" cy="322" r="2"></circle><circle cx="96" cy="336" r="2"></circle><circle cx="96" cy="350" r="2"></circle><circle cx="96" cy="364" r="2"></circle><circle cx="96" cy="378" r="2"></circle></g>
+  <g transform="translate(168,0)"><circle cx="96" cy="250" r="2"></circle><circle cx="96" cy="264" r="2"></circle><circle cx="96" cy="278" r="2"></circle><circle cx="96" cy="292" r="2"></circle><circle cx="96" cy="306" r="2"></circle><circle cx="96" cy="322" r="2"></circle><circle cx="96" cy="336" r="2"></circle><circle cx="96" cy="350" r="2"></circle><circle cx="96" cy="364" r="2"></circle><circle cx="96" cy="378" r="2"></circle></g>
+  <g transform="translate(216,0)"><circle cx="96" cy="250" r="2"></circle><circle cx="96" cy="264" r="2"></circle><circle cx="96" cy="278" r="2"></circle><circle cx="96" cy="292" r="2"></circle><circle cx="96" cy="306" r="2"></circle><circle cx="96" cy="322" r="2"></circle><circle cx="96" cy="336" r="2"></circle><circle cx="96" cy="350" r="2"></circle><circle cx="96" cy="364" r="2"></circle><circle cx="96" cy="378" r="2"></circle></g>
+</g>
+
+<!-- microcontroller mounted on breadboard -->
+<rect x="150" y="260" width="150" height="60" rx="4" fill="#0a5a41" filter="url(#softShadow)"></rect>
+<g fill="#c9a13b">
+  <rect x="158" y="253" width="6" height="10"></rect><rect x="172" y="253" width="6" height="10"></rect><rect x="186" y="253" width="6" height="10"></rect><rect x="200" y="253" width="6" height="10"></rect><rect x="214" y="253" width="6" height="10"></rect><rect x="228" y="253" width="6" height="10"></rect><rect x="242" y="253" width="6" height="10"></rect><rect x="256" y="253" width="6" height="10"></rect><rect x="270" y="253" width="6" height="10"></rect><rect x="284" y="253" width="6" height="10"></rect>
+  <rect x="158" y="317" width="6" height="10"></rect><rect x="172" y="317" width="6" height="10"></rect><rect x="186" y="317" width="6" height="10"></rect><rect x="200" y="317" width="6" height="10"></rect><rect x="214" y="317" width="6" height="10"></rect><rect x="228" y="317" width="6" height="10"></rect><rect x="242" y="317" width="6" height="10"></rect><rect x="256" y="317" width="6" height="10"></rect><rect x="270" y="317" width="6" height="10"></rect><rect x="284" y="317" width="6" height="10"></rect>
+</g>
+<rect x="160" y="268" width="30" height="30" rx="2" fill="#1d1d1f"></rect>
+<text x="203" y="296" font-size="12" fill="#ffffff" font-weight="600">MCU</text>
+
+<!-- Arduino Uno board -->
+<g filter="url(#softShadow)">
+  <rect x="470" y="330" width="260" height="180" rx="10" fill="url(#boardGrad)"></rect>
+</g>
+<rect x="470" y="330" width="260" height="180" rx="10" fill="none" stroke="#083f2e" stroke-width="1.5"></rect>
+<text x="500" y="370" font-size="22" fill="#ffffff" font-weight="700" letter-spacing="1">ARDUINO</text>
+<text x="500" y="392" font-size="16" fill="#dfe9e5">UNO R3</text>
+<circle cx="700" cy="352" r="10" fill="#c94a3d"></circle>
+<rect x="480" y="480" width="34" height="20" rx="3" fill="#c9a13b"></rect>
+<text x="486" y="475" font-size="10" fill="#dfe9e5">USB</text>
+<rect x="690" y="470" width="26" height="30" rx="4" fill="#1d1d1f"></rect>
+<g fill="#c9a13b">
+  <rect x="540" y="332" width="6" height="12"></rect><rect x="554" y="332" width="6" height="12"></rect><rect x="568" y="332" width="6" height="12"></rect><rect x="582" y="332" width="6" height="12"></rect><rect x="596" y="332" width="6" height="12"></rect><rect x="610" y="332" width="6" height="12"></rect><rect x="624" y="332" width="6" height="12"></rect><rect x="638" y="332" width="6" height="12"></rect>
+  <rect x="540" y="496" width="6" height="12"></rect><rect x="554" y="496" width="6" height="12"></rect><rect x="568" y="496" width="6" height="12"></rect><rect x="582" y="496" width="6" height="12"></rect><rect x="596" y="496" width="6" height="12"></rect><rect x="610" y="496" width="6" height="12"></rect><rect x="624" y="496" width="6" height="12"></rect><rect x="638" y="496" width="6" height="12"></rect>
+</g>
+
+<!-- HC-SR04 ultrasonic sensor -->
+<g filter="url(#softShadow)">
+  <rect x="500" y="120" width="220" height="110" rx="10" fill="#1f8a5c"></rect>
+</g>
+<circle cx="558" cy="175" r="34" fill="url(#capGrad)" stroke="#7a7a7a" stroke-width="1.5"></circle>
+<circle cx="558" cy="175" r="22" fill="#c9c9c9" stroke="#8a8a8a" stroke-width="1"></circle>
+<circle cx="558" cy="175" r="10" fill="#9a9a9a"></circle>
+<circle cx="660" cy="175" r="34" fill="url(#capGrad)" stroke="#7a7a7a" stroke-width="1.5"></circle>
+<circle cx="660" cy="175" r="22" fill="#c9c9c9" stroke="#8a8a8a" stroke-width="1"></circle>
+<circle cx="660" cy="175" r="10" fill="#9a9a9a"></circle>
+<text x="522" y="222" font-size="13" fill="#eafff1">HC-SR04</text>
+
+<!-- jumper wires with connector caps -->
+<g fill="none" stroke-width="4" stroke-linecap="round">
+  <path d="M300 290 C 400 250 470 230 555 210" stroke="#e05146"></path>
+  <path d="M300 300 C 420 320 470 280 555 175" stroke="#1d1d1f"></path>
+  <path d="M300 310 C 430 360 480 400 555 175" stroke="#4a86e8"></path>
+  <path d="M300 320 C 440 400 500 420 660 175" stroke="#f2c94c"></path>
+  <path d="M240 320 C 280 380 400 420 470 420" stroke="#e05146"></path>
+  <path d="M264 320 C 300 400 420 440 470 445" stroke="#1d1d1f"></path>
+</g>
+<g fill="#333333">
+  <circle cx="300" cy="290" r="4"></circle><circle cx="555" cy="210" r="4"></circle>
+  <circle cx="300" cy="300" r="4"></circle><circle cx="555" cy="175" r="4"></circle>
+  <circle cx="300" cy="310" r="4"></circle>
+  <circle cx="300" cy="320" r="4"></circle><circle cx="660" cy="175" r="4"></circle>
+  <circle cx="240" cy="320" r="4"></circle><circle cx="470" cy="420" r="4"></circle>
+  <circle cx="264" cy="320" r="4"></circle><circle cx="470" cy="445" r="4"></circle>
+</g>
+
+<text x="60" y="575" font-size="20" fill="#7a7a7a">Câblage capteur ultrasons et microcontrôleur — robot autonome</text>
 </svg>

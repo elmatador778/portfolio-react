@@ -1,66 +1,125 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="system-ui,sans-serif">
-<rect width="800" height="600" fill="#fafafc"></rect>
+<defs>
+  <linearGradient id="viewportBg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#3a3d44"></stop>
+    <stop offset="100%" stop-color="#22242a"></stop>
+  </linearGradient>
+  <linearGradient id="strapTop" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#3d8bff"></stop>
+    <stop offset="100%" stop-color="#0052a3"></stop>
+  </linearGradient>
+  <linearGradient id="strapSide" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#0052a3"></stop>
+    <stop offset="100%" stop-color="#00305e"></stop>
+  </linearGradient>
+  <linearGradient id="buckleTop" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#e8e8ea"></stop>
+    <stop offset="100%" stop-color="#b4b6bc"></stop>
+  </linearGradient>
+  <linearGradient id="buckleSide" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#9a9ca2"></stop>
+    <stop offset="100%" stop-color="#6c6e74"></stop>
+  </linearGradient>
+</defs>
 
-<!-- isometric seat shell -->
-<g stroke="#1d1d1f" stroke-width="2.5" fill="none" stroke-linejoin="round">
-  <path d="M300 460 L300 300 L420 240 L540 300 L540 460 L420 520 Z"></path>
-  <path d="M300 300 L420 360 L540 300"></path>
-  <path d="M420 360 L420 520"></path>
-  <path d="M300 460 L420 520 L540 460"></path>
+<rect width="800" height="600" fill="#e5e6ea"></rect>
+
+<!-- app window -->
+<rect x="30" y="30" width="740" height="540" rx="10" fill="#f4f4f6" stroke="#c7c8cd" stroke-width="1.5"></rect>
+
+<!-- title bar -->
+<rect x="30" y="30" width="740" height="34" rx="10" fill="#dcdde2"></rect>
+<rect x="30" y="52" width="740" height="12" fill="#dcdde2"></rect>
+<circle cx="54" cy="47" r="5" fill="#c3c4ca"></circle>
+<circle cx="72" cy="47" r="5" fill="#c3c4ca"></circle>
+<circle cx="90" cy="47" r="5" fill="#c3c4ca"></circle>
+<text x="360" y="52" font-size="12" fill="#6b6d73">harnais_ancrage_v3.cad</text>
+
+<!-- menu / ribbon -->
+<rect x="30" y="64" width="740" height="30" fill="#eceeef"></rect>
+<text x="46" y="84" font-size="12" fill="#4a4c52">Fichier</text>
+<text x="102" y="84" font-size="12" fill="#4a4c52">Esquisse</text>
+<text x="170" y="84" font-size="12" fill="#0066cc" font-weight="600">Modélisation</text>
+<text x="270" y="84" font-size="12" fill="#4a4c52">Assemblage</text>
+<text x="352" y="84" font-size="12" fill="#4a4c52">Simulation</text>
+<text x="428" y="84" font-size="12" fill="#4a4c52">Affichage</text>
+
+<!-- left tool rail -->
+<rect x="30" y="94" width="46" height="446" fill="#eceeef"></rect>
+<g fill="none" stroke="#5a5c62" stroke-width="1.6">
+  <path d="M45 112 l8 8 l0 12 l-8 -4 Z" fill="#8a8c92"></path>
+  <rect x="43" y="148" width="16" height="16" rx="2"></rect>
+  <circle cx="51" cy="188" r="8"></circle>
+  <path d="M43 218 h16 M51 210 v16"></path>
+  <path d="M43 250 q8 -12 16 0 q-8 12 -16 0 Z"></path>
+  <rect x="43" y="278" width="16" height="10" rx="2"></rect>
 </g>
-<text x="452" y="255" font-size="14" fill="#7a7a7a">coque baquet</text>
 
-<!-- centerline -->
-<line x1="420" y1="200" x2="420" y2="540" stroke="#7a7a7a" stroke-width="1.5" stroke-dasharray="8 5"></line>
+<!-- viewport -->
+<rect x="76" y="94" width="644" height="380" fill="url(#viewportBg)"></rect>
 
-<!-- shoulder straps -->
-<g stroke="#0066cc" stroke-width="6" fill="none" stroke-linecap="round">
-  <path d="M355 250 C 370 300 395 340 418 372"></path>
-  <path d="M485 250 C 470 300 445 340 422 372"></path>
+<!-- axis gizmo -->
+<g transform="translate(676,130)" stroke-width="2.4" stroke-linecap="round">
+  <line x1="0" y1="0" x2="26" y2="0" stroke="#ff5a4e"></line>
+  <line x1="0" y1="0" x2="-14" y2="16" stroke="#3dd68c"></line>
+  <line x1="0" y1="0" x2="0" y2="-26" stroke="#4a86e8"></line>
+  <circle cx="26" cy="0" r="3" fill="#ff5a4e"></circle>
+  <circle cx="-14" cy="16" r="3" fill="#3dd68c"></circle>
+  <circle cx="0" cy="-26" r="3" fill="#4a86e8"></circle>
 </g>
 
-<!-- lap straps -->
-<g stroke="#0066cc" stroke-width="6" fill="none" stroke-linecap="round">
-  <path d="M320 430 C 360 400 395 384 418 376"></path>
-  <path d="M520 430 C 480 400 445 384 422 376"></path>
+<!-- shaded isometric seat + harness assembly -->
+<g transform="translate(60,20)">
+  <path d="M300 420 L300 300 L400 250 L500 300 L500 420 L400 470 Z" fill="#4a4d54" stroke="#1a1b1e" stroke-width="1.5"></path>
+  <path d="M300 300 L400 350 L500 300" fill="none" stroke="#1a1b1e" stroke-width="1.5"></path>
+
+  <!-- shoulder straps (top-lit + shadow side) -->
+  <path d="M348 262 C 362 300 382 330 400 352 L392 360 C 372 335 355 305 340 268 Z" fill="url(#strapTop)"></path>
+  <path d="M452 262 C 438 300 418 330 400 352 L408 360 C 428 335 445 305 460 268 Z" fill="url(#strapSide)"></path>
+
+  <!-- lap straps -->
+  <path d="M318 400 C 350 378 378 362 398 353 L404 362 C 382 372 355 388 326 408 Z" fill="url(#strapTop)"></path>
+  <path d="M482 400 C 450 378 422 362 402 353 L396 362 C 418 372 445 388 474 408 Z" fill="url(#strapSide)"></path>
+
+  <!-- crotch strap -->
+  <rect x="393" y="352" width="14" height="60" fill="url(#strapTop)"></rect>
+
+  <!-- central buckle, shaded box -->
+  <path d="M378 336 L378 356 L400 368 L422 356 L422 336 L400 324 Z" fill="url(#buckleTop)" stroke="#3a3b40" stroke-width="1"></path>
+  <path d="M378 356 L400 368 L400 380 L378 368 Z" fill="url(#buckleSide)"></path>
+  <path d="M422 356 L400 368 L400 380 L422 368 Z" fill="url(#buckleSide)"></path>
+  <circle cx="400" cy="352" r="7" fill="#0066cc"></circle>
 </g>
 
-<!-- crotch strap -->
-<path d="M420 500 L420 380" stroke="#0066cc" stroke-width="6" fill="none" stroke-linecap="round"></path>
-
-<!-- central 5-point buckle -->
-<circle cx="420" cy="374" r="20" fill="#ffffff" stroke="#1d1d1f" stroke-width="2.5"></circle>
-<circle cx="420" cy="374" r="7" fill="#0066cc"></circle>
-
-<!-- shoulder anchors -->
-<circle cx="352" cy="246" r="5" fill="#1d1d1f"></circle>
-<circle cx="488" cy="246" r="5" fill="#1d1d1f"></circle>
-<circle cx="316" cy="432" r="5" fill="#1d1d1f"></circle>
-<circle cx="524" cy="432" r="5" fill="#1d1d1f"></circle>
-<circle cx="420" cy="504" r="5" fill="#1d1d1f"></circle>
-
-<!-- callouts -->
-<g stroke="#7a7a7a" stroke-width="1" fill="none">
-  <line x1="420" y1="374" x2="600" y2="330"></line>
-  <line x1="352" y1="246" x2="230" y2="200"></line>
-  <line x1="420" y1="504" x2="600" y2="540"></line>
+<!-- feature timeline -->
+<rect x="76" y="474" width="644" height="46" fill="#eceeef"></rect>
+<line x1="96" y1="497" x2="700" y2="497" stroke="#c7c8cd" stroke-width="2"></line>
+<g fill="#ffffff" stroke="#0066cc" stroke-width="2">
+  <circle cx="120" cy="497" r="7"></circle>
+  <circle cx="210" cy="497" r="7"></circle>
+  <circle cx="300" cy="497" r="7"></circle>
+  <circle cx="390" cy="497" r="7"></circle>
+  <circle cx="480" cy="497" r="7"></circle>
 </g>
-<text x="604" y="326" font-size="16" fill="#1d1d1f" font-weight="600">Boucle centrale multiplex</text>
-<text x="604" y="344" font-size="13" fill="#7a7a7a">ouverture rapide, 5 brins</text>
+<circle cx="570" cy="497" r="7" fill="#0066cc" stroke="#0066cc" stroke-width="2"></circle>
+<text x="102" y="513" font-size="9" fill="#7a7c82">Esquisse</text>
+<text x="188" y="513" font-size="9" fill="#7a7c82">Extrusion</text>
+<text x="278" y="513" font-size="9" fill="#7a7c82">Congé</text>
+<text x="364" y="513" font-size="9" fill="#7a7c82">Assemblage</text>
+<text x="450" y="513" font-size="9" fill="#7a7c82">Contrainte</text>
+<text x="546" y="513" font-size="9" fill="#0066cc">Rendu</text>
 
-<text x="120" y="196" font-size="16" fill="#1d1d1f" font-weight="600">Ancrage sangle épaule</text>
-<text x="120" y="214" font-size="13" fill="#7a7a7a">sangle polyester 45 mm</text>
+<!-- right dimension panel -->
+<rect x="720" y="94" width="50" height="426" fill="#eceeef"></rect>
+<text x="726" y="112" font-size="9" fill="#6b6d73" writing-mode="vertical-rl">PARAMÈTRES</text>
 
-<text x="604" y="536" font-size="16" fill="#1d1d1f" font-weight="600">Sangle entrejambe</text>
-<text x="604" y="554" font-size="13" fill="#7a7a7a">anti-sous-marinage</text>
+<!-- properties strip -->
+<rect x="30" y="520" width="740" height="50" fill="#f4f4f6"></rect>
+<text x="46" y="540" font-size="11" fill="#4a4c52">Épaisseur boucle : 3.00 mm</text>
+<text x="240" y="540" font-size="11" fill="#4a4c52">Rayon congé : 2.00 mm</text>
+<text x="420" y="540" font-size="11" fill="#4a4c52">Matériau : acier inox 316L</text>
+<text x="46" y="558" font-size="11" fill="#4a4c52">Sangle : polyester 45 mm</text>
+<text x="240" y="558" font-size="11" fill="#4a4c52">Charge de rupture : ≥ 22 kN</text>
 
-<!-- dimension marker -->
-<g stroke="#1d1d1f" stroke-width="1.5">
-  <line x1="560" y1="300" x2="560" y2="460"></line>
-  <line x1="552" y1="300" x2="568" y2="300"></line>
-  <line x1="552" y1="460" x2="568" y2="460"></line>
-</g>
-<text x="574" y="384" font-size="13" fill="#7a7a7a">H seat</text>
-
-<text x="60" y="580" font-size="20" fill="#7a7a7a">Harnais 5 points — étude CAO, siège de manège à sensations</text>
+<text x="46" y="34" font-size="0" fill="none"></text>
 </svg>

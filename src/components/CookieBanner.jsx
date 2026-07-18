@@ -24,7 +24,7 @@ export default function CookieBanner() {
           exit={{ y: 100, opacity: 0 }}
           transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
           style={{
-            position: 'fixed', left: 22, right: 22, bottom: 22, zIndex: 100,
+            position: 'fixed', left: 22, right: 22, bottom: 92, zIndex: 51,
             maxWidth: 780, margin: '0 auto', background: '#ffffff', border: '1px solid #e0e0e0',
             borderRadius: 18, boxShadow: 'rgba(0,0,0,0.16) 0px 8px 30px 0', padding: '20px 24px',
             display: 'flex', gap: 20, alignItems: 'center', flexWrap: 'wrap', justifyContent: 'space-between',

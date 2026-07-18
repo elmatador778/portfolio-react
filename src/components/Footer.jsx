@@ -3,7 +3,7 @@ import { EMAIL, PHONE_DISPLAY, CV_PATH } from '../data/portfolioData';
 
 export default function Footer({ goTo }) {
   return (
-    <footer style={{ background: '#f5f5f7', borderTop: '1px solid #e0e0e0', padding: '64px 22px 40px' }}>
+    <footer style={{ background: '#f5f5f7', borderTop: '1px solid #e0e0e0', padding: '64px 22px 120px' }}>
       <div style={{ maxWidth: 980, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: 32 }}>
         <div>
           <h3 style={headingStyle}>Navigation</h3>

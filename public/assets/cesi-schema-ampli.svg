@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="system-ui,sans-serif">
+<defs>
+  <pattern id="gridAmpli" width="20" height="20" patternUnits="userSpaceOnUse">
+    <path d="M20 0 L0 0 0 20" fill="none" stroke="#e8edf5" stroke-width="1"></path>
+  </pattern>
+  <linearGradient id="chipGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#3a3a3c"></stop>
+    <stop offset="100%" stop-color="#1d1d1f"></stop>
+  </linearGradient>
+</defs>
+<rect width="800" height="600" fill="#fbfcfe"></rect>
+<rect x="40" y="40" width="720" height="480" fill="url(#gridAmpli)"></rect>
+<rect x="40" y="40" width="720" height="480" fill="none" stroke="#d5dbe6" stroke-width="1.5"></rect>
+
+<!-- signal source -->
+<circle cx="120" cy="280" r="26" fill="#ffffff" stroke="#1d1d1f" stroke-width="2.5"></circle>
+<path d="M108 280 Q114 266 120 280 T132 280" fill="none" stroke="#0066cc" stroke-width="2"></path>
+<text x="96" y="330" font-size="15" fill="#7a7a7a">Vin</text>
+
+<g stroke="#1d1d1f" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="146" y1="280" x2="230" y2="280"></line>
+
+  <!-- input resistor R1 zigzag -->
+  <path d="M230 280 l10 -10 l14 20 l14 -20 l14 20 l14 -20 l10 10"></path>
+  <line x1="316" y1="280" x2="360" y2="280"></line>
+
+  <!-- op-amp triangle -->
+  <path d="M360 220 L360 340 L470 280 Z" fill="#ffffff"></path>
+  <line x1="376" y1="248" x2="392" y2="248"></line>
+  <line x1="384" y1="240" x2="384" y2="256"></line>
+  <line x1="376" y1="312" x2="392" y2="312"></line>
+
+  <!-- non-inverting input to ground -->
+  <line x1="360" y1="310" x2="330" y2="310"></line>
+  <line x1="330" y1="310" x2="330" y2="380"></line>
+  <line x1="316" y1="380" x2="344" y2="380"></line>
+  <line x1="321" y1="390" x2="339" y2="390"></line>
+  <line x1="326" y1="400" x2="334" y2="400"></line>
+
+  <!-- output -->
+  <line x1="470" y1="280" x2="560" y2="280"></line>
+
+  <!-- feedback loop -->
+  <path d="M470 280 L470 160 L300 160 L300 250"></path>
+  <path d="M300 250 l-10 10 l20 14 l-20 14 l20 14 l-10 8" transform="translate(0 -40)"></path>
+
+  <!-- power rails -->
+  <line x1="415" y1="220" x2="415" y2="190"></line>
+  <line x1="415" y1="340" x2="415" y2="370"></line>
+</g>
+
+<text x="404" y="185" font-size="16" fill="#7a7a7a">+V</text>
+<text x="404" y="388" font-size="16" fill="#7a7a7a">−V</text>
+<text x="395" y="298" font-size="24" fill="#1d1d1f" font-weight="700">A1</text>
+<text x="252" y="270" font-size="16" fill="#7a7a7a">R1</text>
+<text x="330" y="150" font-size="16" fill="#7a7a7a">Rf</text>
+
+<!-- output stage: coupling cap + speaker -->
+<g stroke="#1d1d1f" stroke-width="2.5" fill="none" stroke-linecap="round">
+  <line x1="560" y1="280" x2="590" y2="280"></line>
+  <line x1="590" y1="260" x2="590" y2="300"></line>
+  <line x1="602" y1="260" x2="602" y2="300"></line>
+  <line x1="602" y1="280" x2="630" y2="280"></line>
+  <rect x="630" y="255" width="30" height="50" fill="#ffffff"></rect>
+  <path d="M660 255 L700 225 L700 335 L660 305 Z" fill="#ffffff"></path>
+</g>
+<text x="580" y="240" font-size="15" fill="#7a7a7a">C1</text>
+<text x="632" y="332" font-size="15" fill="#7a7a7a">HP</text>
+
+<!-- waveform inset -->
+<rect x="560" y="380" width="180" height="90" rx="6" fill="#1d1d1f"></rect>
+<path d="M570 425 Q585 405 600 425 T630 425 T660 425 T690 425 T720 425" fill="none" stroke="#3dd68c" stroke-width="1.5"></path>
+<path d="M570 425 Q580 400 590 425 T610 425 T630 425 T650 425 T670 425 T690 425 T710 425 T730 425" fill="none" stroke="#0066cc" stroke-width="1.5" opacity="0.7"></path>
+<text x="568" y="464" font-size="11" fill="#cccccc">entrée / sortie amplifiée</text>
+
+<!-- title block -->
+<rect x="40" y="480" width="720" height="60" fill="#ffffff" stroke="#1d1d1f" stroke-width="1.5"></rect>
+<line x1="560" y1="480" x2="560" y2="540" stroke="#1d1d1f" stroke-width="1"></line>
+<text x="60" y="504" font-size="17" font-weight="600" fill="#1d1d1f">Amplificateur audio — montage non inverseur</text>
+<text x="60" y="524" font-size="13" fill="#7a7a7a">Gain = 1 + Rf/R1 · AOP alimentation symétrique ±V</text>
+<text x="580" y="504" font-size="13" fill="#7a7a7a">CESI Toulouse · TP électronique</text>
+<text x="580" y="524" font-size="13" fill="#7a7a7a">Feuille 1/1 · Rev. A</text>
+
+<text x="60" y="575" font-size="20" fill="#7a7a7a">Amplificateur audio, montage non inverseur</text>
+</svg>

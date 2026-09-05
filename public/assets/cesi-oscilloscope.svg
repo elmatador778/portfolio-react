@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="system-ui,sans-serif">
+<defs>
+  <linearGradient id="bezelGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#4a4a4d"></stop>
+    <stop offset="100%" stop-color="#2a2a2c"></stop>
+  </linearGradient>
+  <radialGradient id="screenGlow" cx="50%" cy="42%" r="75%">
+    <stop offset="0%" stop-color="#0a2e1c"></stop>
+    <stop offset="100%" stop-color="#04140c"></stop>
+  </radialGradient>
+  <filter id="traceGlow" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur stdDeviation="2.4" result="blur"></feGaussianBlur>
+    <feMerge>
+      <feMergeNode in="blur"></feMergeNode>
+      <feMergeNode in="SourceGraphic"></feMergeNode>
+    </feMerge>
+  </filter>
+  <filter id="softShadow2" x="-30%" y="-30%" width="160%" height="160%">
+    <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.25"></feDropShadow>
+  </filter>
+</defs>
+<rect width="800" height="600" fill="#eceef2"></rect>
+
+<!-- instrument bezel -->
+<g filter="url(#softShadow2)">
+  <rect x="70" y="70" width="660" height="420" rx="16" fill="url(#bezelGrad)"></rect>
+</g>
+<rect x="70" y="70" width="660" height="420" rx="16" fill="none" stroke="#1a1a1c" stroke-width="1.5"></rect>
+<text x="96" y="100" font-size="15" fill="#cfcfd2" letter-spacing="2">OSCILLOSCOPE NUMÉRIQUE</text>
+<circle cx="700" cy="92" r="5" fill="#3dd68c"></circle>
+<text x="614" y="98" font-size="12" fill="#9a9a9d">RUN</text>
+
+<!-- screen -->
+<rect x="100" y="120" width="480" height="300" rx="6" fill="url(#screenGlow)"></rect>
+<rect x="100" y="120" width="480" height="300" rx="6" fill="none" stroke="#000000" stroke-width="2"></rect>
+
+<!-- graticule -->
+<g stroke="#1f5c3e" stroke-width="1">
+  <line x1="160" y1="120" x2="160" y2="420"></line><line x1="220" y1="120" x2="220" y2="420"></line><line x1="280" y1="120" x2="280" y2="420"></line><line x1="340" y1="120" x2="340" y2="420"></line><line x1="400" y1="120" x2="400" y2="420"></line><line x1="460" y1="120" x2="460" y2="420"></line><line x1="520" y1="120" x2="520" y2="420"></line>
+  <line x1="100" y1="150" x2="580" y2="150"></line><line x1="100" y1="180" x2="580" y2="180"></line><line x1="100" y1="210" x2="580" y2="210"></line><line x1="100" y1="240" x2="580" y2="240"></line><line x1="100" y1="270" x2="580" y2="270"></line><line x1="100" y1="300" x2="580" y2="300"></line><line x1="100" y1="330" x2="580" y2="330"></line><line x1="100" y1="360" x2="580" y2="360"></line><line x1="100" y1="390" x2="580" y2="390"></line>
+</g>
+<line x1="340" y1="120" x2="340" y2="420" stroke="#2d7a52" stroke-width="1.5"></line>
+<line x1="100" y1="270" x2="580" y2="270" stroke="#2d7a52" stroke-width="1.5"></line>
+
+<!-- input trace (amber, before filter) -->
+<path d="M100 270 L100 270.0 L110 253.2 L120 236.8 L130 221.6 L140 208.4 L150 197.8 L160 190.4 L170 186.5 L180 186.3 L190 189.6 L200 196.0 L210 205.1 L220 216.2 L230 228.6 L240 241.7 L250 254.6 L260 266.8 L270 277.6 L280 286.4 L290 292.9 L300 296.7 L310 297.7 L320 296.0 L330 291.7 L340 285.2 L350 277.1 L360 267.8 L370 258.1 L380 248.5 L390 239.7 L400 232.3 L410 226.7 L420 223.2 L430 222.0 L440 223.0 L450 226.3 L460 231.4 L470 238.2 L480 246.1 L490 254.7 L500 263.3 L510 271.5 L520 278.8 L530 284.8 L540 289.2 L550 291.9 L560 292.7 L570 291.7 L580 289.0" fill="none" stroke="#f2c94c" stroke-width="1.5" opacity="0.55"></path>
+
+<!-- output trace (green, filtered / amplified) -->
+<path d="M100 280 L110 270.1 L120 260.4 L130 251.0 L140 242.2 L150 233.8 L160 226.2 L170 219.3 L180 213.2 L190 208.0 L200 203.7 L210 200.4 L220 198.2 L230 196.9 L240 196.7 L250 197.6 L260 199.4 L270 202.2 L280 206.0 L290 210.6 L300 216.0 L310 222.1 L320 228.9 L330 236.2 L340 244.0 L350 252.1 L360 260.5 L370 269.1 L380 277.7 L390 286.2 L400 294.5 L410 302.6 L420 310.3 L430 317.6 L440 324.3 L450 330.4 L460 335.8 L470 340.4 L480 344.3 L490 347.3 L500 349.5 L510 350.8 L520 351.2 L530 350.7 L540 349.4 L550 347.2 L560 344.2 L570 340.5 L580 336.1" fill="none" stroke="#3dd68c" stroke-width="2.4" filter="url(#traceGlow)"></path>
+
+<!-- on-screen readout -->
+<text x="112" y="140" font-size="13" fill="#3dd68c">CH1  2.00 V/div</text>
+<text x="112" y="156" font-size="13" fill="#f2c94c" opacity="0.8">CH2  2.00 V/div</text>
+<text x="440" y="140" font-size="13" fill="#9be7c4">1.00 ms/div</text>
+<text x="440" y="404" font-size="13" fill="#9be7c4">f = 1.02 kHz   Vpp = 3.4 V</text>
+
+<!-- control panel -->
+<g fill="#c9c9cc">
+  <circle cx="630" cy="160" r="20"></circle>
+  <circle cx="690" cy="160" r="20"></circle>
+</g>
+<g fill="none" stroke="#1a1a1c" stroke-width="2">
+  <line x1="630" y1="160" x2="630" y2="144"></line>
+  <line x1="690" y1="160" x2="700" y2="150"></line>
+</g>
+<text x="608" y="196" font-size="11" fill="#9a9a9d">POSITION</text>
+<text x="672" y="196" font-size="11" fill="#9a9a9d">V/DIV</text>
+
+<g fill="#3a3a3d" stroke="#151516" stroke-width="1">
+  <rect x="600" y="230" width="46" height="24" rx="4"></rect>
+  <rect x="654" y="230" width="46" height="24" rx="4"></rect>
+  <rect x="600" y="262" width="46" height="24" rx="4"></rect>
+  <rect x="654" y="262" width="46" height="24" rx="4"></rect>
+</g>
+<text x="611" y="246" font-size="11" fill="#cfcfd2">AUTO</text>
+<text x="666" y="246" font-size="11" fill="#cfcfd2">RUN</text>
+<text x="613" y="278" font-size="11" fill="#cfcfd2">CH1</text>
+<text x="666" y="278" font-size="11" fill="#cfcfd2">CH2</text>
+
+<circle cx="655" cy="350" r="34" fill="#3a3a3d" stroke="#151516" stroke-width="1.5"></circle>
+<line x1="655" y1="350" x2="655" y2="322" stroke="#c9c9cc" stroke-width="3" stroke-linecap="round"></line>
+<text x="614" y="404" font-size="11" fill="#9a9a9d">TIME/DIV</text>
+
+<!-- probe leads to the DUT (device under test) -->
+<g stroke="#e05146" stroke-width="3" fill="none" stroke-linecap="round">
+  <path d="M100 260 C 40 300 30 420 90 470"></path>
+</g>
+<g stroke="#1d1d1f" stroke-width="3" fill="none" stroke-linecap="round">
+  <path d="M100 300 C 30 340 20 440 90 490"></path>
+</g>
+<circle cx="90" cy="470" r="6" fill="#e05146"></circle>
+<circle cx="90" cy="490" r="6" fill="#1d1d1f"></circle>
+<rect x="55" y="455" width="70" height="60" rx="6" fill="#ffffff" stroke="#1d1d1f" stroke-width="2"></rect>
+<text x="62" y="490" font-size="11" fill="#7a7a7a">DUT</text>
+
+<text x="60" y="575" font-size="20" fill="#7a7a7a">Réponse d'un filtre — mesure et validation à l'oscilloscope</text>
+</svg>

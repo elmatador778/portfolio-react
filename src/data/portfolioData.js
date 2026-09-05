@@ -158,7 +158,7 @@ export const formationImages = [
   { src: `${BASE}assets/cesi-pcb-layout.svg`, cap: "Conception et routage d'une carte de commande" },
 ];
 
-export const CV_PATH = `${BASE}CV-Tsiky-Andrianarisata.pdf`;
+export const CV_PATH = `${BASE}CV_Tsiky_ANDRIANARISATA.pdf`;
 export const EMAIL = 'andrianarisatatsiky@gmail.com';
 export const PHONE_DISPLAY = '06 41 15 96 12';
 export const PHONE_HREF = '+33641159612';

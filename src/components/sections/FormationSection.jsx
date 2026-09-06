@@ -8,7 +8,7 @@ export default function FormationSection() {
         Université Paul Sabatier, Toulouse.
       </h2>
       <p style={{ margin: '14px auto 0', maxWidth: 640, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 24, fontWeight: 300, lineHeight: 1.5, color: '#1d1d1f' }}>
-        Licence L2 EEA — Cursus Universitaire Préparatoire aux Grandes Écoles (CUPGE), à partir de septembre 2026.
+        Licence L2 EEA, Cursus Universitaire Préparatoire aux Grandes Écoles (CUPGE), à partir de septembre 2026.
       </p>
 
       <div style={{ maxWidth: 640, margin: '32px auto 0', background: '#ffffff', border: '1px solid #e0e0e0', borderRadius: 18, padding: 24, textAlign: 'left' }}>

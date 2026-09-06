@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Dock from '../components/Dock';
-import Footer from '../components/Footer';
 import HeroSection from '../components/sections/HeroSection';
 import ExperienceSection from '../components/sections/ExperienceSection';
 import FormationSection from '../components/sections/FormationSection';
@@ -27,7 +26,6 @@ export default function Portfolio() {
       {page === 'projets' && <ProjectsSection filtre={filtre} setFiltre={setFiltre} />}
       {page === 'competences' && <SkillsSection />}
       {page === 'contact' && <ContactSection />}
-      <Footer goTo={goTo} />
     </>
   );
 }

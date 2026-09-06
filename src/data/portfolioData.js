@@ -45,7 +45,15 @@ export const experiences = [
     label: 'A3D Design',
     titre: "Designer 3D : stage d'observation (modélisation et animation)",
     meta: "A3D Design, Limoges · juillet 2021",
-    paras: ["Modélisations numériques exigeant rigueur et minutie, dans le respect des délais."],
+    paras: [
+      "Découverte de la conception mécanique assistée par ordinateur et de la modélisation 3D sous SolidWorks. Cette expérience m'a permis d'observer les différentes étapes de préparation d'un assemblage : lecture de pièces, positionnement des composants et contrôle de leur cohérence mécanique.",
+      "Les vues d'assemblage et les vues éclatées permettent de communiquer clairement la structure d'un mécanisme. Elles facilitent l'identification des composants, la compréhension de leur montage et la préparation des opérations d'assemblage ou de maintenance.",
+      "Ce stage a renforcé ma rigueur, ma minutie et ma capacité à respecter un cahier des charges ainsi que des délais de réalisation.",
+    ],
+    images: [
+      { src: `${BASE}assets/a3d-modelisation-solidworks.jpeg`, cap: "Assemblage mécanique sous SolidWorks : visualisation d'un mécanisme composé de pièces, pignons et éléments de liaison." },
+      { src: `${BASE}assets/a3d-vue-eclatee-solidworks.jpeg`, cap: "Vue éclatée sous SolidWorks : les composants sont séparés pour rendre leur positionnement et leur ordre d'assemblage immédiatement lisibles." },
+    ],
   },
   {
     label: 'Natation',

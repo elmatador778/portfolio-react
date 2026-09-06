@@ -5,11 +5,26 @@ export default function FormationSection() {
     <section style={{ background: '#f5f5f7', padding: '96px 22px', textAlign: 'center' }}>
       <p style={{ margin: '0 0 10px', fontSize: 14, fontWeight: 600, letterSpacing: '-0.224px', color: '#7a7a7a', textTransform: 'uppercase' }}>Formation</p>
       <h2 style={{ margin: 0, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 40, fontWeight: 600, lineHeight: 1.1, color: '#1d1d1f' }}>
-        CESI École d'ingénieurs, Toulouse.
+        Université Paul Sabatier, Toulouse.
       </h2>
       <p style={{ margin: '14px auto 0', maxWidth: 640, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 24, fontWeight: 300, lineHeight: 1.5, color: '#1d1d1f' }}>
-        Cycle préparatoire intégré, 2ᵉ année, spécialité Systèmes Électriques et Électroniques Embarqués (SEEE). Cycle ingénieur par alternance dès septembre 2026.
+        Licence L2 EEA — Cursus Universitaire Préparatoire aux Grandes Écoles (CUPGE), à partir de septembre 2026.
       </p>
+
+      <div style={{ maxWidth: 640, margin: '32px auto 0', background: '#ffffff', border: '1px solid #e0e0e0', borderRadius: 18, padding: 24, textAlign: 'left' }}>
+        <p style={{ margin: '0 0 8px', fontSize: 12, fontWeight: 600, letterSpacing: '-0.12px', color: '#0066cc', textTransform: 'uppercase' }}>Nouvelle formation</p>
+        <h3 style={{ margin: '0 0 8px', fontSize: 17, fontWeight: 600, letterSpacing: '-0.374px', color: '#1d1d1f' }}>
+          Licence L2 EEA · CUPGE
+        </h3>
+        <p style={{ margin: 0, fontSize: 14, lineHeight: 1.43, letterSpacing: '-0.224px', color: '#333333' }}>
+          Université Paul Sabatier, Toulouse · dès septembre 2026.
+        </p>
+      </div>
+
+      <p style={{ margin: '48px 0 0', fontSize: 14, letterSpacing: '-0.224px', color: '#7a7a7a' }}>
+        Précédemment : cycle préparatoire intégré CESI Toulouse, spécialité Systèmes Électriques et Électroniques Embarqués (SEEE).
+      </p>
+
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: 20, maxWidth: 980, margin: '48px auto 0', textAlign: 'left' }}>
         {formationCards.map((c) => (
           <div key={c.titre} style={{ background: '#ffffff', border: '1px solid #e0e0e0', borderRadius: 18, padding: 24 }}>

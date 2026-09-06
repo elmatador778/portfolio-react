@@ -26,15 +26,15 @@ export default function ExperienceSection({ expIndex, setExpIndex }) {
           <p key={i} style={{ margin: 0, fontSize: 17, lineHeight: 1.47, letterSpacing: '-0.374px', color: '#cccccc' }}>{pa}</p>
         ))}
 
-        {/* Si l'expérience utilise des puces personnalisées sans tirets (ex: ONERA) */}
-        {exp.bullets && exp.bullets.length > 0 && (
-          <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'grid', gap: 16 }}>
-            {exp.bullets.map((bullet, i) => (
-              <li key={i} style={{ fontSize: 17, lineHeight: 1.47, letterSpacing: '-0.374px', color: '#cccccc' }}>
-                {bullet}
-              </li>
+        {exp.details && exp.details.length > 0 && (
+          <div style={{ display: 'grid', gap: 20 }}>
+            {exp.details.map((detail) => (
+              <article key={detail.titre} style={{ paddingLeft: 18, borderLeft: '2px solid #7a7a7a' }}>
+                <h3 style={{ margin: '0 0 6px', fontSize: 16, fontWeight: 600, color: '#ffffff' }}>{detail.titre}</h3>
+                <p style={{ margin: 0, fontSize: 17, lineHeight: 1.47, letterSpacing: '-0.374px', color: '#cccccc' }}>{detail.texte}</p>
+              </article>
             ))}
-          </ul>
+          </div>
         )}
       </div>
 

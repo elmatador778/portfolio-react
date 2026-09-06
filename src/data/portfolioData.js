@@ -14,12 +14,27 @@ export const experiences = [
     label: 'ONERA',
     titre: "Stagiaire Développeur Python : interface graphique et visualisation scientifique",
     meta: "ONERA, Département Physique (DPHY), Toulouse · avril à juin 2026",
-    bullets: [
-      "Conception et développement d'une interface graphique complète (Python, Eel, HTML, JavaScript, Plotly) pour CSiPI, code de simulation Monte Carlo d'érosion par pulvérisation ionique pour la propulsion électrique spatiale.",
-      "Architecture multi-simulations concurrentes : isolation des jobs, suivi de progression en temps réel, gestion robuste des processus. Application portable Linux (RHEL) et Windows. Visualisation 3D, rapports PDF automatiques, YAML/JSON, Git.",
-      "Tests et validation avec les chercheurs utilisateurs · rédaction d'un rapport technique complet et soutenance devant jury.",
-      "Optimisation des flux de données et de la réactivité de l'IHM pour traiter de larges volumes de paramètres de simulation.",
-      "Immersion au sein du département de physique (DPHY/CSE) favorisant les échanges interdisciplinaires entre développement logiciel et recherche scientifique aérospatiale."
+    details: [
+      {
+        titre: 'Contexte et objectif',
+        texte: "Développement d'une interface graphique pour CSiPI, un code de simulation Monte Carlo utilisé pour étudier l'érosion par pulvérisation ionique dans le cadre de la propulsion électrique spatiale. L'objectif était de rendre les calculs plus accessibles aux chercheurs, de la préparation d'un cas de simulation à l'analyse des résultats.",
+      },
+      {
+        titre: 'Interface et visualisation scientifique',
+        texte: "Conception d'une application complète en Python, Eel, HTML et JavaScript. Mise en place de formulaires de configuration pour les paramètres physiques, de graphiques interactifs avec Plotly et de visualisations 3D afin de faciliter l'interprétation des résultats.",
+      },
+      {
+        titre: 'Gestion des simulations',
+        texte: "Mise en œuvre d'une architecture permettant de lancer plusieurs simulations en parallèle, avec isolation des jobs, suivi de leur progression en temps réel et gestion robuste des processus. Les paramètres et résultats sont structurés en YAML et JSON pour assurer leur traçabilité.",
+      },
+      {
+        titre: "Industrialisation de l'outil",
+        texte: "Développement d'une application portable sous Linux (RHEL) et Windows, avec génération automatique de rapports PDF. Travail sur la fluidité de l'IHM et l'optimisation des flux de données pour conserver une expérience réactive, même avec de nombreux paramètres de simulation.",
+      },
+      {
+        titre: 'Collaboration et validation',
+        texte: "Échanges réguliers avec les chercheurs du département de physique (DPHY/CSE) pour recueillir les besoins, tester les fonctionnalités et valider les résultats. Rédaction d'un rapport technique complet et présentation du travail devant un jury.",
+      },
     ],
     images: [
       { src: `${BASE}assets/onera-configuration.png`, cap: "Onglet Configuration : paramétrage de la simulation (particule incidente, cible)" },

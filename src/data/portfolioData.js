@@ -1,61 +1,166 @@
-import { experiences } from '../../data/portfolioData';
+const BASE = import.meta.env.BASE_URL;
 
-export default function ExperienceSection({ expIndex, setExpIndex }) {
-  const exp = experiences[expIndex];
+export const pages = [
+  { id: 'accueil', label: 'Accueil' },
+  { id: 'experience', label: 'Expérience' },
+  { id: 'formation', label: 'Formation' },
+  { id: 'projets', label: 'Projets' },
+  { id: 'competences', label: 'Compétences' },
+  { id: 'contact', label: 'Contact' },
+];
 
-  return (
-    <section id="experience" style={{ background: '#272729', padding: '96px 22px', textAlign: 'center' }}>
-      <p style={{ margin: '0 0 10px', fontSize: 14, fontWeight: 600, letterSpacing: '-0.224px', color: '#cccccc', textTransform: 'uppercase' }}>Expérience</p>
-      <h2 style={{ margin: 0, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 40, fontWeight: 600, lineHeight: 1.1, color: '#ffffff' }}>
-        Expérience professionnelle.
-      </h2>
-      <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap', marginTop: 32 }}>
-        {experiences.map((e, i) => (
-          <button key={e.label} onClick={() => setExpIndex(i)} style={i === expIndex ? tabActiveStyle : tabInactiveStyle}>
-            {e.label}
-          </button>
-        ))}
-      </div>
-      
-      <p style={{ margin: '40px 0 0', fontSize: 21, fontWeight: 600, letterSpacing: '0.231px', color: '#ffffff' }}>{exp.titre}</p>
-      <p style={{ margin: '8px 0 0', fontSize: 14, letterSpacing: '-0.224px', color: '#cccccc' }}>{exp.meta}</p>
-      
-      <div style={{ maxWidth: 720, margin: '32px auto 0', textAlign: 'left', display: 'grid', gap: 20 }}>
-        {/* Si l'expérience utilise des paragraphes classiques */}
-        {exp.paras && exp.paras.map((pa, i) => (
-          <p key={i} style={{ margin: 0, fontSize: 17, lineHeight: 1.47, letterSpacing: '-0.374px', color: '#cccccc' }}>{pa}</p>
-        ))}
+export const experiences = [
+  {
+    label: 'ONERA',
+    titre: "Stagiaire Développeur Python : interface graphique et visualisation scientifique",
+    meta: "ONERA, Département Physique (DPHY), Toulouse · avril à juin 2026",
+    bullets: [
+      "Conception et développement d'une interface graphique complète (Python, Eel, HTML, JavaScript, Plotly) pour CSiPI, code de simulation Monte Carlo d'érosion par pulvérisation ionique pour la propulsion électrique spatiale.",
+      "Architecture multi-simulations concurrentes : isolation des jobs, suivi de progression en temps réel, gestion robuste des processus. Application portable Linux (RHEL) et Windows. Visualisation 3D, rapports PDF automatiques, YAML/JSON, Git.",
+      "Tests et validation avec les chercheurs utilisateurs · rédaction d'un rapport technique complet et soutenance devant jury.",
+      "Optimisation des flux de données et de la réactivité de l'IHM pour traiter de larges volumes de paramètres de simulation.",
+      "Immersion au sein du département de physique (DPHY/CSE) favorisant les échanges interdisciplinaires entre développement logiciel et recherche scientifique aérospatiale."
+    ],
+    images: [
+      { src: `${BASE}assets/onera-configuration.png`, cap: "Onglet Configuration : paramétrage de la simulation (particule incidente, cible)" },
+      { src: `${BASE}assets/onera-simulations.png`, cap: "Gestion des simulations concurrentes avec suivi de progression en temps réel" },
+    ],
+  },
+  {
+    label: 'A3D Design',
+    titre: "Designer 3D : stage d'observation (modélisation et animation)",
+    meta: "A3D Design, Limoges · juillet 2021",
+    paras: ["Modélisations numériques exigeant rigueur et minutie, dans le respect des délais."],
+  },
+  {
+    label: 'Natation',
+    titre: "Nageur de compétition (niveau national)",
+    meta: "ASPTT Toulouse Natation · depuis septembre 2008",
+    paras: [
+      "Entraînements intensifs (18 heures par semaine), participation aux championnats nationaux.",
+      "Gestion du double projet sport-études : organisation, discipline, résilience.",
+    ],
+  },
+];
 
-        {/* Si l'expérience utilise des puces personnalisées sans tirets (ex: ONERA) */}
-        {exp.bullets && exp.bullets.length > 0 && (
-          <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'grid', gap: 16 }}>
-            {exp.bullets.map((bullet, i) => (
-              <li key={i} style={{ fontSize: 17, lineHeight: 1.47, letterSpacing: '-0.374px', color: '#cccccc' }}>
-                {bullet}
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
+export const projetsData = [
+  {
+    tag: 'Électronique analogique',
+    cat: 'Électronique',
+    titre: "Amplis audio & pédale d'effet Overdrive-Distorsion",
+    desc: "Pédale de type Tube Screamer TS808 : simulation du circuit, rétro-ingénierie du schéma, montage sur plaque LABDEC puis réalisation de la carte électronique et du prototype final. Conception et test d'amplis audio.",
+    imgSrc: `${BASE}assets/pedale-p3b.png`,
+  },
+  {
+    tag: 'Robotique embarquée',
+    cat: 'Embarqué',
+    titre: 'Robot autonome à évitement d\'obstacles',
+    desc: "Châssis 4 roues motrices sur Arduino Uno : capteur ultrasonique HC-SR04, pilotage des moteurs via pont en H L298N, logique d'évitement programmée en C++ (mesure d'écho, arrêt, recul, pivot).",
+    imgSrc: 'https://images.unsplash.com/photo-1558137623-ce933996c730?q=80&w=800&auto=format&fit=crop',
+    imgCredit: 'Photo by Marília Castelli on Unsplash',
+    imgCreditHref: 'https://unsplash.com/@liacastelli',
+  },
+  {
+    tag: 'Capteurs & temps réel',
+    cat: 'Embarqué',
+    titre: 'Radar à ultrasons',
+    desc: 'Capteur HC-SR04 et servomoteur, acquisition et visualisation de données en temps réel sous Processing.',
+    imgSrc: 'https://images.unsplash.com/photo-1631378297854-185cff6b0986?q=80&w=800&auto=format&fit=crop',
+    imgCredit: 'Photo by Vishnu Mohanan on Unsplash',
+    imgCreditHref: 'https://unsplash.com/@vishnumaiea',
+  },
+];
 
-      {exp.images && exp.images.length > 0 && (
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(320px,1fr))', gap: 24, maxWidth: 980, margin: '48px auto 0' }}>
-          {exp.images.map((im) => (
-            <figure key={im.src} style={{ margin: 0, display: 'flex', flexDirection: 'column', gap: 10 }}>
-              <div
-                role="img"
-                aria-label={im.cap}
-                style={{ width: '100%', aspectRatio: '1119/644', backgroundImage: `url("${im.src}")`, backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: 8, boxShadow: 'rgba(0,0,0,0.22) 3px 5px 30px 0' }}
-              />
-              <figcaption style={{ fontSize: 12, letterSpacing: '-0.12px', color: '#cccccc', textAlign: 'center' }}>{im.cap}</figcaption>
-            </figure>
-          ))}
-        </div>
-      )}
-    </section>
-  );
-}
+export const pedaleGallery = [
+  { src: `${BASE}assets/pedale-p3b.png`, cap: "1. Schéma électronique de l'effet (simulation)" },
+  { src: `${BASE}assets/pedale-p5c.png`, cap: "2. Mesure de l'écrêtage à l'oscilloscope" },
+];
 
-const chipBase = { fontFamily: 'inherit', fontSize: 14, letterSpacing: '-0.224px', padding: '10px 18px', borderRadius: 9999, cursor: 'pointer' };
-const tabActiveStyle = { ...chipBase, background: '#ffffff', color: '#1d1d1f', border: '1px solid #ffffff', fontWeight: 600 };
-const tabInactiveStyle = { ...chipBase, background: 'transparent', color: '#ffffff', border: '1px solid #7a7a7a', fontWeight: 400 };
+export const robotGallery = [
+  { src: 'https://images.unsplash.com/photo-1577962144759-8dec6b55c952?q=80&w=800&auto=format&fit=crop', cap: '1. Inventaire des composants', credit: 'Photo Robin Glauser, Unsplash', creditHref: 'https://unsplash.com/@nahakiole' },
+  { src: 'https://images.unsplash.com/photo-1553406830-ef2513450d76?q=80&w=800&auto=format&fit=crop', cap: '2. Arduino Uno, cerveau du robot', credit: 'Photo Harrison Broadbent, Unsplash', creditHref: 'https://unsplash.com/@harrisonbroadbent' },
+  { src: 'https://images.unsplash.com/photo-1555664424-778a1e5e1b48?q=80&w=800&auto=format&fit=crop', cap: '3. Câblage capteur et moteurs', credit: 'Photo Robin Glauser, Unsplash', creditHref: 'https://unsplash.com/@nahakiole' },
+  { src: 'https://images.unsplash.com/photo-1561144257-e32e8efc6c4f?q=80&w=800&auto=format&fit=crop', cap: '4. Robot assemblé, prêt à rouler', credit: 'Photo Marília Castelli, Unsplash', creditHref: 'https://unsplash.com/@liacastelli' },
+];
+
+export const projFilters = ['Tous', 'Électronique', 'Embarqué'];
+
+export const skills = [
+  { titre: 'Langages & développement', items: ['Python', 'C++ · C', 'SQL', 'HTML · JavaScript · Bash', 'POO · Git'] },
+  { titre: 'Embarqué & électronique', items: ['Microcontrôleurs · Arduino', 'Électronique analogique & numérique', 'Capteurs · RF · traitement du signal', 'Automatique · PID', 'Soudure · prototypage'] },
+  { titre: 'Environnements & outils', items: ['Linux (RHEL) · Windows', 'YAML · JSON', 'Plotly · visualisation de données', 'Interfaces graphiques (GUI)'] },
+  { titre: "Méthodes d'ingénierie", items: ['Gestion de projet', 'Gantt · MoSCoW', 'Rédaction technique', 'Tests & validation'] },
+];
+
+export const formationCards = [
+  { titre: 'Électronique et signal', desc: 'Amplification, filtrage, radiofréquence (RF), traitement du signal pour systèmes communicants.' },
+  { titre: 'Automatique', desc: 'Lois de commande, régulation, asservissement de systèmes linéaires : PID, stabilité, précision.' },
+  { titre: 'Embarqué et informatique', desc: 'Architecture des microcontrôleurs, POO (C++, Python), protocoles réseaux, SQL.' },
+];
+
+export const semesters = [
+  {
+    label: 'Semestre 1',
+    photo: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=800&auto=format&fit=crop',
+    credit: 'Photo by Dan Cristian Pădureț on Unsplash',
+    creditHref: 'https://unsplash.com/@dancristianpaduret',
+    topics: [
+      'Mathématiques et logique : complexes, analyse, algèbre de Boole',
+      'Électricité : courant continu et alternatif',
+      'Ondes, étude fréquentielle et filtrage',
+      'Mécanique et incertitudes',
+      'Algorithmique : C/Arduino, Python',
+    ],
+  },
+  {
+    label: 'Semestre 2',
+    photo: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800&auto=format&fit=crop',
+    credit: 'Photo by Danist Soh on Unsplash',
+    creditHref: 'https://unsplash.com/@danist07',
+    topics: [
+      'Probabilités, statistiques et algèbre',
+      'Thermique et résistance des matériaux (RDM)',
+      'Bases de données et langage SQL',
+      'CAO et gestion de production',
+      'Argumentaire technico-commercial',
+    ],
+  },
+  {
+    label: 'Semestre 3 · Spécialité SEEE',
+    photo: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop',
+    credit: 'Photo by Alexandre Debiève on Unsplash',
+    creditHref: 'https://unsplash.com/@alexkixa',
+    topics: [
+      'Électromagnétisme et radioélectricité',
+      'Électronique analogique : semi-conducteurs, AOP',
+      'Réseaux : adressage IP, Ethernet, CCNA',
+      'Capteurs, actionneurs, régulation et asservissement',
+      'Analyse en 3 dimensions',
+    ],
+  },
+  {
+    label: 'Semestre 4',
+    photo: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=800&auto=format&fit=crop',
+    credit: 'Photo by Christopher Gower on Unsplash',
+    creditHref: 'https://unsplash.com/@cgower',
+    topics: [
+      'Programmation orientée objet',
+      'Programmation embarquée',
+      'Architectures informatiques et assembleur',
+      'Théorie du langage, structures de données, complexité',
+      'Stage en entreprise (8 semaines et plus)',
+    ],
+  },
+];
+
+export const formationImages = [
+  { src: `${BASE}assets/cesi-schema-ampli.svg`, cap: 'Amplificateur audio, montage non inverseur' },
+  { src: `${BASE}assets/cesi-cablage-arduino.svg`, cap: 'Câblage capteur ultrasons et microcontrôleur' },
+  { src: `${BASE}assets/cesi-oscilloscope.svg`, cap: "Mesure et validation à l'oscilloscope" },
+  { src: `${BASE}assets/cesi-pcb-layout.svg`, cap: "Conception et routage d'une carte de commande" },
+];
+
+export const CV_PATH = `${BASE}CV_Tsiky_ANDRIANARISATA.pdf`;
+export const EMAIL = 'andrianarisatatsiky@gmail.com';
+export const PHONE_DISPLAY = '06 41 15 96 12';
+export const PHONE_HREF = '+33641159612';

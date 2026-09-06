@@ -92,6 +92,33 @@ export const projetsData = [
     imgCredit: 'Photo by Vishnu Mohanan on Unsplash',
     imgCreditHref: 'https://unsplash.com/@vishnumaiea',
   },
+  {
+    tag: 'Système embarqué · PBL',
+    cat: 'Embarqué',
+    titre: 'StrongBox3000 — Coffre-fort électronique',
+    desc: "Conception d'un coffre-fort électronique piloté par microcontrôleur : saisie d'un code d'accès sur clavier, retour utilisateur sur écran et commande du verrou par servomoteur. Projet mené en équipe selon une démarche PBL, de l'analyse du besoin aux essais d'intégration.",
+    imgSrc: 'https://content.instructables.com/FYU/7V00/JASJQJKX/FYU7V00JASJQJKX.jpg',
+    imgCredit: 'Image d’illustration : Instructables — Electronic Safe',
+    imgCreditHref: 'https://www.instructables.com/Electronic-Safe/',
+  },
+  {
+    tag: 'Traitement du signal',
+    cat: 'Électronique',
+    titre: 'Chaîne audio — microphone, filtrage et amplification',
+    desc: "Conception d'une chaîne de traitement audio autour d'un microphone : préamplification par AOP, filtrage analogique pour atténuer le bruit et étage d'amplification. Dimensionnement des composants puis validation du signal à l'oscilloscope.",
+    imgSrc: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop',
+    imgCredit: 'Photo by Alexandre Debiève on Unsplash',
+    imgCreditHref: 'https://unsplash.com/@alexkixa',
+  },
+  {
+    tag: 'Programmation embarquée',
+    cat: 'Embarqué',
+    titre: 'Jouet interactif à servomoteur',
+    desc: "Réalisation d'un jouet animé à base de microcontrôleur et de servomoteur. Programmation de la commande PWM pour positionner l'actionneur et mise au point des séquences de mouvement, du câblage jusqu'aux essais de fonctionnement.",
+    imgSrc: 'https://hackster.imgix.net/uploads/attachments/1603576/_8gKYMbBWHJ.blob?auto=compress&fit=min&fm=jpg&h=1200&w=1600',
+    imgCredit: 'Image d’illustration : Neeti Thakur via Hackster.io',
+    imgCreditHref: 'https://www.hackster.io/neetithakur/servo-with-arduino-uno-39065b',
+  },
 ];
 
 export const pedaleGallery = [
@@ -112,13 +139,14 @@ export const skills = [
   { titre: 'Langages & développement', items: ['Python', 'C++ · C', 'SQL', 'HTML · JavaScript · Bash', 'POO · Git'] },
   { titre: 'Embarqué & électronique', items: ['Microcontrôleurs · Arduino', 'Électronique analogique & numérique', 'Capteurs · RF · traitement du signal', 'Automatique · PID', 'Soudure · prototypage'] },
   { titre: 'Environnements & outils', items: ['Linux (RHEL) · Windows', 'YAML · JSON', 'Plotly · visualisation de données', 'Interfaces graphiques (GUI)'] },
-  { titre: "Méthodes d'ingénierie", items: ['Gestion de projet', 'Gantt · MoSCoW', 'Rédaction technique', 'Tests & validation'] },
+  { titre: "Méthodes d'ingénierie", items: ['Apprentissage par problèmes (PBL)', 'Gestion de projet', 'Gantt · MoSCoW', 'Rédaction technique', 'Tests & validation'] },
 ];
 
 export const formationCards = [
   { titre: 'Électronique et signal', desc: 'Amplification, filtrage, radiofréquence (RF), traitement du signal pour systèmes communicants.' },
   { titre: 'Automatique', desc: 'Lois de commande, régulation, asservissement de systèmes linéaires : PID, stabilité, précision.' },
   { titre: 'Embarqué et informatique', desc: 'Architecture des microcontrôleurs, POO (C++, Python), protocoles réseaux, SQL.' },
+  { titre: 'Méthode PBL', desc: 'Apprentissage par problèmes : travail en équipe à partir d’un cas concret, analyse du besoin, recherche de solutions, prototypage puis restitution et retour d’expérience.' },
 ];
 
 export const semesters = [

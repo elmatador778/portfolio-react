@@ -15,7 +15,7 @@ export default function ContactSection() {
         Travaillons ensemble.
       </h2>
       <p style={{ margin: '14px 0 0', fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 28, fontWeight: 400, lineHeight: 1.14, letterSpacing: '0.196px', color: '#1d1d1f' }}>
-        Alternance ingénieur systèmes embarqués et développement logiciel.
+        Étudiant en Licence L2 EEA (CUPGE), ouvert aux opportunités en systèmes embarqués et développement logiciel.
       </p>
       <div style={{ display: 'flex', gap: 16, justifyContent: 'center', marginTop: 32, flexWrap: 'wrap' }}>
         <a href={`mailto:${EMAIL}`} style={primaryPillStyle}>{EMAIL}</a>

@@ -16,13 +16,28 @@ export default function ExperienceSection({ expIndex, setExpIndex }) {
           </button>
         ))}
       </div>
+      
       <p style={{ margin: '40px 0 0', fontSize: 21, fontWeight: 600, letterSpacing: '0.231px', color: '#ffffff' }}>{exp.titre}</p>
       <p style={{ margin: '8px 0 0', fontSize: 14, letterSpacing: '-0.224px', color: '#cccccc' }}>{exp.meta}</p>
+      
       <div style={{ maxWidth: 720, margin: '32px auto 0', textAlign: 'left', display: 'grid', gap: 20 }}>
-        {exp.paras.map((pa, i) => (
+        {/* Si l'expérience utilise des paragraphes classiques */}
+        {exp.paras && exp.paras.map((pa, i) => (
           <p key={i} style={{ margin: 0, fontSize: 17, lineHeight: 1.47, letterSpacing: '-0.374px', color: '#cccccc' }}>{pa}</p>
         ))}
+
+        {/* Si l'expérience utilise des puces personnalisées sans tirets (ex: ONERA) */}
+        {exp.bullets && exp.bullets.length > 0 && (
+          <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'grid', gap: 16 }}>
+            {exp.bullets.map((bullet, i) => (
+              <li key={i} style={{ fontSize: 17, lineHeight: 1.47, letterSpacing: '-0.374px', color: '#cccccc' }}>
+                {bullet}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
+
       {exp.images && exp.images.length > 0 && (
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(320px,1fr))', gap: 24, maxWidth: 980, margin: '48px auto 0' }}>
           {exp.images.map((im) => (
